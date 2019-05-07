@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+        <link rel="stylesheet" href="css/animate.css">
+			<link rel="stylesheet" type="text/css" href="css/jquery.fancybox.min.css">
+    <title>Vargas | Portafolio</title>
+      <link rel="icon" href="v.ico">
+  </head>
+  <body>
+    <div class="cursor">
+      <div class="cursor__inner cursor__inner--circle"></div>
+      <div class="cursor__inner cursor__inner--dot"></div>
+    </div>
+    <div  id="navbar">
+      <div class="container">
+        <nav>
+          <input type="checkbox" id="nav" class="hiden">
+          <label for="nav" class="nav-btn">
+            <i></i>
+            <i></i>
+            <i></i>
+          </label>
+          <div class="logo">
+            <a href="index.html"><img src="images/Recurso 1.png" alt="" style="width:90px;"></a>
+          </div>
+          <div class="nav-wrapper">
+            <ul>
+              <li><a href="index.html"class="a">Portafolio</a></li>
+              <li><a href="CV.html" class="a">Curriculum Vitae</a></li>
+
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <div class="wrapper">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<div class="boxcreative animated slideInDown">
+							<h1>Diorama</h1>
+							<p style="font-weight:500; font-size:20px; margin-top:-10px;">Studio</p>
+						</div>
+						<div class="boxcreative2 animated fadeIn">
+							<p>Diorama es un estudio especializado en ilustración y render de arquitectura. La marca esta conceptualizada para utilizarse mediante un isotipo, el cual tiene la habilidad de adaptarse y reproducirse de manera física y digital. La identidad se enfoca en la modernidad y lo novedoso, acompañado de nuevas tecnologías con conceptos laborales trascendentes, separando la idea de la arquitectura clásica.</p>
+							<div style="padding-top:20px;">
+								<div class="row animated slideInUp">
+									<div class="col-4"><i class="fas fa-calendar-alt"></i><h5 style="font-size:15px;">2019</h5></div>
+									<div class="col-4"><i class="fas fa-briefcase"></i><h5 style="font-size:15px;">Naming e identidad de marca</h5></div>
+									<div class="col-4"><i class="fas fa-globe-americas"></i><h5 style="font-size:15px;">Mérida, Yucatán</h5></div>
+								</div>
+							</div>
+
+						</div>
+						<div class="row">
+							<div class="col-12">
+								<div class="boximages animated fadeIn">
+                  <div class="hover01">
+                    <a href="images/DIO/Mockup5.jpg" data-fancybox="gallery">
+                      <img src="images/DIO/Mockup5.jpg" style="width:100%;">
+                    </a>
+                    <a href="images/DIO/Mockup1.jpg" data-fancybox="gallery">
+                      <img src="images/DIO/Mockup1.jpg" style="width:100%;">
+                    </a>
+                    <a href="images/DIO/Mockup2.jpg" data-fancybox="gallery">
+                      <img src="images/DIO/Mockup2.jpg" style="width:100%;">
+                    </a>
+                    <a href="images/DIO/Mockup3.jpg" data-fancybox="gallery">
+                      <img src="images/DIO/Mockup3.jpg" style="width:100%;">
+                    </a>
+                    <a href="images/DIO/Mockup4.jpg" data-fancybox="gallery">
+                      <img src="images/DIO/Mockup4.jpg" style="width:100%;">
+                    </a>
+                  </div>
+
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+
+          <footer>
+
+
+                <p>Esteban Alfaro Vargas | Diseñador Interactivo</p>
+          </footer>
+    </div>
+    <script type="text/javascript">
+          window.sr = ScrollReveal();
+          sr.reveal('.anim');
+    </script>
+    <script>
+    {
+  // Some help functions.
+  const shuffleArray = arr => arr.sort(() => Math.random() - 0.5);
+  const lineEq = (y2, y1, x2, x1, currentVal) => {
+      let m = (y2 - y1) / (x2 - x1);
+      let b = y1 - m * x1;
+      return m * currentVal + b;
+  };
+  const lerp = (a, b, n) => (1 - n) * a + n * b;
+  const body = document.body;
+  const bodyColor = getComputedStyle(body).getPropertyValue('--color-bg').trim() || 'white';
+  const getMousePos = (e) => {
+      let posx = 0;
+      let posy = 0;
+      if (!e) e = window.event;
+      if (e.pageX || e.pageY) {
+          posx = e.pageX;
+          posy = e.pageY;
+      }
+      else if (e.clientX || e.clientY) 	{
+          posx = e.clientX + body.scrollLeft + document.documentElement.scrollLeft;
+          posy = e.clientY + body.scrollTop + document.documentElement.scrollTop;
+      }
+      return { x : posx, y : posy }
+  }
+
+  // Window sizes.
+  let winsize;
+  const calcWinsize = () => winsize = {width: window.innerWidth, height: window.innerHeight};
+  calcWinsize();
+  // Recalculate window sizes on resize.
+  window.addEventListener('resize', calcWinsize);
+
+  // Custom mouse cursor.
+  class CursorFx {
+      constructor(el) {
+          this.DOM = {el: el};
+          this.DOM.dot = this.DOM.el.querySelector('.cursor__inner--dot');
+          this.DOM.circle = this.DOM.el.querySelector('.cursor__inner--circle');
+          this.bounds = {dot: this.DOM.dot.getBoundingClientRect(), circle: this.DOM.circle.getBoundingClientRect()};
+          this.scale = 1;
+          this.opacity = 1;
+          this.mousePos = {x:0, y:0};
+          this.lastMousePos = {dot: {x:0, y:0}, circle: {x:0, y:0}};
+          this.lastScale = 1;
+          this.lastOpacity = 1;
+
+          this.initEvents();
+          requestAnimationFrame(() => this.render());
+      }
+      initEvents() {
+          window.addEventListener('mousemove', ev => this.mousePos = getMousePos(ev));
+      }
+      render() {
+          this.lastMousePos.dot.x = lerp(this.lastMousePos.dot.x, this.mousePos.x - this.bounds.dot.width/2, 1);
+          this.lastMousePos.dot.y = lerp(this.lastMousePos.dot.y, this.mousePos.y - this.bounds.dot.height/2, 1);
+          this.lastMousePos.circle.x = lerp(this.lastMousePos.circle.x, this.mousePos.x - this.bounds.circle.width/2, 0.15);
+          this.lastMousePos.circle.y = lerp(this.lastMousePos.circle.y, this.mousePos.y - this.bounds.circle.height/2, 0.15);
+          this.lastScale = lerp(this.lastScale, this.scale, 0.15);
+          this.lastOpacity = lerp(this.lastOpacity, this.opacity, 0.1);
+          this.DOM.dot.style.transform = `translateX(${(this.lastMousePos.dot.x)}px) translateY(${this.lastMousePos.dot.y}px)`;
+          this.DOM.circle.style.transform = `translateX(${(this.lastMousePos.circle.x)}px) translateY(${this.lastMousePos.circle.y}px) scale(${this.lastScale})`;
+          this.DOM.circle.style.opacity = this.lastOpacity
+          requestAnimationFrame(() => this.render());
+      }
+      enter() {
+          cursor.scale = 2.7;
+      }
+      leave() {
+          cursor.scale = 1;
+      }
+      click() {
+          this.lastScale = 1;
+          this.lastOpacity = 0;
+      }
+  }
+
+  const cursor = new CursorFx(document.querySelector('.cursor'));
+
+  // Custom cursor chnages state when hovering on elements with 'data-hover'.
+  [...document.querySelectorAll('[data-hover]')].forEach((link) => {
+      link.addEventListener('mouseenter', () => cursor.enter() );
+      link.addEventListener('mouseleave', () => cursor.leave() );
+      link.addEventListener('click', () => cursor.click() );
+  });
+}
+    </script>
+      <script src="js/button.js"></script>
+<script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="js/jquery.fancybox.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
